@@ -7,13 +7,13 @@
         <th>Name</th>
         <th>Description</th>
     </tr>
-    <% @todo.each do |t| %>
+    <% @todo.each do |todo| %>
         <tr>
-            <td><%= t.name %></td>
-            <td><%= t.description %></td>
-            <td><%= link_to "Show", todo_path(t) %></td>
-            <td><%= link_to "Edit", edit_todo_path(t) %></td>
-            <td><%= link_to "Delete", todo_path(t) ,
+            <td><%= todo.name %></td>
+            <td><%= todo.description %></td>
+            <td><%= link_to "Show", todo_path(todo) %></td>
+            <td><%= link_to "Edit", edit_todo_path(todo) %></td>
+            <td><%= link_to "Delete", todo_path(todo) ,
                     method: :delete,
                     data: { confirm: 'Delete this to do?' } %></td>
         </tr>
